@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/pizzaImg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/pizza02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pizzaType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pizzaImg"
+        android:layout_toRightOf="@+id/pizzaImg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="User Name vgrgergr  rrgrg grg"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/pizzaImg"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaImg" />
+
+    <TextView
+        android:id="@+id/shortDescTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pizzaType"
+        android:layout_alignLeft="@+id/pizzaType"
+        android:maxLines="2"
+        android:layout_marginTop="5dp"
+        android:text="Oolio food pizza dfvfr  erfri rfrei rfr ererfwe  efewf edfew e  ef"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaType" />
+
+
+    <TextView
+        android:id="@+id/pricetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="11$"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/shortDescTxt" />
+
+
+    <TextView
+        android:id="@+id/customerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Please select customer : "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/pricetxt" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/customerTitle"
+        app:layout_constraintStart_toEndOf="@+id/customerTitle"
+        app:layout_constraintTop_toTopOf="@+id/customerTitle" />
+
+    <TextView
+        android:id="@+id/smallSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Small Size : "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/customerTitle" />
+
+    <TextView
+        android:id="@+id/mediumSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Medium Size : "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/smallSize" />
+
+    <TextView
+        android:id="@+id/largeSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Size : "
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/mediumSize"></TextView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Total Price"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/largeSize" />
+
+    <TextView
+        android:id="@+id/totalAmountTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Final price after discount : "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/pizzaType"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/totalAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/totalAmountTitle"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+    <EditText
+        android:id="@+id/smallSizeInputLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/smallSize"
+        app:layout_constraintStart_toEndOf="@+id/smallSize"
+        android:hint="Quantity"
+        android:ems="10"
+        android:maxLength="4"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@+id/smallSize"/>
+
+    <EditText
+        android:id="@+id/mediumSizeInputLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        app:layout_constraintBottom_toBottomOf="@+id/mediumSize"
+        app:layout_constraintStart_toStartOf="@+id/smallSizeInputLayout"
+        app:layout_constraintTop_toTopOf="@+id/mediumSize"
+        android:ems="10"
+        android:maxLength="4"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/largeSizeInputLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        app:layout_constraintBottom_toBottomOf="@+id/largeSize"
+        app:layout_constraintStart_toStartOf="@+id/smallSizeInputLayout"
+        app:layout_constraintTop_toTopOf="@+id/largeSize"
+        android:ems="10"
+        android:maxLength="4"
+        android:inputType="number" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.invisiademo.ui.home
+package com.example.myapplication.presentation.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
